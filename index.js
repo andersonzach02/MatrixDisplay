@@ -1,15 +1,19 @@
 let word;
+// let trailingCharacterColor;
+let leadingCharacterColor;
 
 function setup() {
     createCanvas(400, 400);
-        
 
-    word = String.fromCharCode('0x30A1');
+    // trailingCharacterColor = color("#00FF41");
+    leadingCharacterColor = color("#dbffe4");
+
+    word = new RainCodeCharacter(width / 2, height / 2);
+
 }
 
 function draw() {
     background(0);
 
-    fill(255);
-    text(word, width/2, height/2);
+    word.draw();
 }
